@@ -46,45 +46,24 @@
 </head>
 <body>
     <h1>Rock Paper Scissors Game</h1>
+
     <button class="rock-button" onclick="
         const computerMove = getComputerMove();
-        if (computerMove === 'rock') {
-            alert(`Tie. Computer chose ${computerMove}\nCurrent score: ${score}`);
-        } else if (computerMove === 'paper') {
-            score--;
-            alert(`You lose. Computer chose ${computerMove}\nCurrent score: ${score}`);
-        } else {
-            score++;
-            alert(`okay you win. Computer chose ${computerMove}\nCurrent score: ${score}`);
-        }
+        playGame('rock', computerMove, 'paper');
     ">Rock</button>
+
     <button class="paper-button" onclick="
         const computerMove = getComputerMove();
-        if (computerMove === 'paper') {
-            alert(`Tie. Computer chose ${computerMove}\nCurrent score: ${score}`);
-        } else if (computerMove === 'scissors') {
-            score--;
-            alert(`You lose. Computer chose ${computerMove}\nCurrent score: ${score}`);
-        } else {
-            score++;
-            alert(`okay you win. Computer chose ${computerMove}\nCurrent score: ${score}`);
-        }
+        playGame('paper', computerMove, 'scissors');
     ">Paper</button>
+
     <button class="scissors-button" onclick="
         const computerMove = getComputerMove();
-        if (computerMove === 'scissors') {
-            alert(`Tie. Computer chose ${computerMove}\nCurrent score: ${score}`);
-        } else if (computerMove === 'rock') {
-            score--;
-            alert(`You lose. Computer chose ${computerMove}\nCurrent score: ${score}`);
-        } else {
-            score++;
-            alert(`okay you win. Computer chose ${computerMove}\nCurrent score: ${score}`);
-        }
+        playGame('scissors', computerMove, 'rock');
     ">Scissors</button>
+
     <script>
         let score = 0;
-
 
         function getComputerMove() {
             const randomNumber = Math.random();
@@ -99,6 +78,18 @@
             }
 
             return computerMove;
+        }
+
+        function playGame(playerMove, computerMove, losingCondition) {
+            if (computerMove === playerMove) {
+                alert(`Tie. Computer chose ${computerMove}\nCurrent score: ${score}`);
+            } else if (computerMove === losingCondition) {
+                score--;
+                alert(`You lose. Computer chose ${computerMove}\nCurrent score: ${score}`);
+            } else {
+                score++;
+                alert(`okay you win. Computer chose ${computerMove}\nCurrent score: ${score}`);
+            }
         }
     </script>
 </body>
