@@ -4,32 +4,124 @@
     <meta charset="UTF-8">
     <title>Youtube Homepage</title>
 
-    <style>
-        .video-class {
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+    <style>
+        p {
+            font-family: Roboto, Arial;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .search-bar {
+            display: block;
         }
 
+        .video-preview {
+            width: 300px;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 15px;
+        }
+
+        .thumbnail-row {
+            margin-bottom: 12px;
+        }
+
+        .thumbnail {
+            display: block;
+            width: 300px;
+        }
+
+        .channel-picture {
+            display: inline-block;
+            width: 50px;
+            vertical-align: top;
+        }
+
+        .profile-picture {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .video-info {
+            display: inline-block;
+            width: 245px;
+        }
+
+        .video-title {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-bottom: 12px;
+        }
+
+        .video-author,
+        .video-stats {
+            font-size: 12px;
+            color: rgb(96, 96, 96);
+        }
+
+        .video-author {
+            margin-bottom: 6px;
+        }
 
     </style>
 </head>
 <body>
-    <div class="video-class">
-        <img class="thumbnail" src="images/thumbnail.jpeg">
+    <input class="search-bar" type="text" placeholder="Search">
+
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="images/thumbnail.jpeg">
+        </div>
 
         <div>
-            <img class="profile-picture" src="">
+            <div class="channel-picture">
+                <img class="profile-picture" src="images/profilepic.jpg">
+            </div>
 
-            <div>
-                <p>
+            <div class="video-info">
+                <p class="video-title">
                     If you feel like a failure, watch this.
                 </p>
 
-                <p>
+                <p class="video-author">
                    Your A+ Life
                 </p>
 
-                <p>
+                <p class="video-stats">
                    11K views &#183; 13 days ago
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-preview">
+        <div class="thumbnail-row">
+            <img class="thumbnail" src="images/thumbnail.jpeg">
+        </div>
+
+        <div>
+            <div class="channel-picture">
+                <img class="profile-picture" src="images/profilepic.jpg">
+            </div>
+
+            <div class="video-info">
+                <p class="video-title">
+                    If you feel like a failure, watch this.
+                </p>
+
+                <p class="video-author">
+                    Your A+ Life
+                </p>
+
+                <p class="video-stats">
+                    11K views &#183; 13 days ago
                 </p>
             </div>
         </div>
