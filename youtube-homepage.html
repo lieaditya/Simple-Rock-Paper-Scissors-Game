@@ -14,43 +14,38 @@
             margin-top: 0;
             margin-bottom: 0;
         }
+
         .search-bar {
             display: block;
         }
 
-        .video-preview {
-            width: 300px;
-            display: inline-block;
-            vertical-align: top;
-            margin-right: 15px;
-        }
-
         .thumbnail-row {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .thumbnail {
-            display: block;
-            width: 300px;
+            width: 100%;
+        }
+
+        .video-info-grid {
+            display: grid;
+            grid-template-columns: 50px 1fr;
         }
 
         .channel-picture {
-            display: inline-block;
-            width: 50px;
-            vertical-align: top;
+            background-color: grey;
         }
 
         .profile-picture {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50px;
             object-fit: cover;
             object-position: top;
         }
 
-        .video-info {
-            display: inline-block;
-            width: 245px;
+        .video-info{
+            background-color: grey;
         }
 
         .video-title {
@@ -70,61 +65,174 @@
             margin-bottom: 6px;
         }
 
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 16px;
+            row-gap: 50px;
+        }
     </style>
 </head>
 <body>
     <input class="search-bar" type="text" placeholder="Search">
 
-    <div class="video-preview">
-        <div class="thumbnail-row">
-            <img class="thumbnail" src="images/thumbnail.jpeg">
-        </div>
-
-        <div>
-            <div class="channel-picture">
-                <img class="profile-picture" src="images/profilepic.jpg">
+    <div class="video-grid">
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="images/thumbnail.jpeg">
             </div>
 
-            <div class="video-info">
-                <p class="video-title">
-                    If you feel like a failure, watch this.
-                </p>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="images/profilepic.jpg">
+                </div>
 
-                <p class="video-author">
-                   Your A+ Life
-                </p>
+                <div class="video-info">
+                    <p class="video-title">
+                        If you feel like a failure, watch this.
+                    </p>
 
-                <p class="video-stats">
-                   11K views &#183; 13 days ago
-                </p>
+                    <p class="video-author">
+                        Your A+ Life
+                    </p>
+
+                    <p class="video-stats">
+                        11K views &#183; 13 days ago
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="images/thumbnail.jpeg">
+            </div>
+
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="images/profilepic.jpg">
+                </div>
+
+                <div class="video-info">
+                    <p class="video-title">
+                        If you feel like a failure, watch this.
+                    </p>
+
+                    <p class="video-author">
+                        Your A+ Life
+                    </p>
+
+                    <p class="video-stats">
+                        11K views &#183; 13 days ago
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="images/thumbnail.jpeg">
+            </div>
+
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="images/profilepic.jpg">
+                </div>
+
+                <div class="video-info">
+                    <p class="video-title">
+                        If you feel like a failure, watch this.
+                    </p>
+
+                    <p class="video-author">
+                        Your A+ Life
+                    </p>
+
+                    <p class="video-stats">
+                        11K views &#183; 13 days ago
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="images/thumbnail.jpeg">
+            </div>
+
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="images/profilepic.jpg">
+                </div>
+
+                <div class="video-info">
+                    <p class="video-title">
+                        If you feel like a failure, watch this.
+                    </p>
+
+                    <p class="video-author">
+                        Your A+ Life
+                    </p>
+
+                    <p class="video-stats">
+                        11K views &#183; 13 days ago
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="images/thumbnail.jpeg">
+            </div>
+
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="images/profilepic.jpg">
+                </div>
+
+                <div class="video-info">
+                    <p class="video-title">
+                        If you feel like a failure, watch this.
+                    </p>
+
+                    <p class="video-author">
+                        Your A+ Life
+                    </p>
+
+                    <p class="video-stats">
+                        11K views &#183; 13 days ago
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="images/thumbnail.jpeg">
+            </div>
+
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="images/profilepic.jpg">
+                </div>
+
+                <div class="video-info">
+                    <p class="video-title">
+                        If you feel like a failure, watch this.
+                    </p>
+
+                    <p class="video-author">
+                        Your A+ Life
+                    </p>
+
+                    <p class="video-stats">
+                        11K views &#183; 13 days ago
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="video-preview">
-        <div class="thumbnail-row">
-            <img class="thumbnail" src="images/thumbnail.jpeg">
-        </div>
-
-        <div>
-            <div class="channel-picture">
-                <img class="profile-picture" src="images/profilepic.jpg">
-            </div>
-
-            <div class="video-info">
-                <p class="video-title">
-                    If you feel like a failure, watch this.
-                </p>
-
-                <p class="video-author">
-                    Your A+ Life
-                </p>
-
-                <p class="video-stats">
-                    11K views &#183; 13 days ago
-                </p>
-            </div>
-        </div>
-    </div>
 </body>
 </html>
