@@ -9,22 +9,19 @@
     <p class="title">Rock Paper Scissors Game</p>
 
     <button class="move-button" onclick="
-        const computerMove = getComputerMove();
-        playGame('rock', computerMove, 'paper');
+        playGame('rock', 'paper');
     ">
         <img class="move-icon" src="images/rock-emoji.png">
     </button>
 
     <button class="move-button" onclick="
-        const computerMove = getComputerMove();
-        playGame('paper', computerMove, 'scissors');
+        playGame('paper', 'scissors');
     ">
         <img class="move-icon" src="images/paper-emoji.png">
     </button>
 
     <button class="move-button" onclick="
-        const computerMove = getComputerMove();
-        playGame('scissors', computerMove, 'rock');
+        playGame('scissors', 'rock');
     ">
         <img class="move-icon" src="images/scissors-emoji.png">
     </button>
@@ -42,6 +39,10 @@
     ">
         Reset Score
     </button>
+
+    <button class="auto-play-button" onclick="
+        autoPlay();
+    ">Auto Play</button>
 
     <script src="scripts/rock-paper-scissors.js"></script>
 </body>

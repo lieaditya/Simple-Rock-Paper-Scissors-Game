@@ -21,8 +21,10 @@ function getComputerMove() {
     return computerMove;
 }
 
-function playGame(playerMove, computerMove, losingCondition) {
-    let result;
+function playGame(playerMove, losingCondition) {
+    const computerMove = getComputerMove();
+    let result = '';
+
     if (computerMove === playerMove) {
         result = 'Tie';
         score.ties++;
@@ -38,13 +40,39 @@ function playGame(playerMove, computerMove, losingCondition) {
     updateScoreElement();
 
     document.querySelector('.js-result').innerHTML = result;
-    document.querySelector('.js-moves').innerHTML =
-        `You
-                <img class="move-icon" src="images/${playerMove}-emoji.png">
-                <img class="move-icon" src="images/${computerMove}-emoji.png">
-                Computer`;
+    document.querySelector('.js-moves').innerHTML = `
+        You
+        <img class="move-icon" src="images/${playerMove}-emoji.png">
+        <img class="move-icon" src="images/${computerMove}-emoji.png">
+        Computer
+    `;
 }
 
 function updateScoreElement() {
     document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+}
+
+let isAutoPlaying = false;
+let intervalId;
+
+function autoPlay() {
+    if (!isAutoPlaying) {
+        intervalId = setInterval(function() {
+            let losingCondition;
+            const playerMove = getComputerMove(); 
+            if (playerMove === 'rock') {
+                losingCondition = 'paper';
+            } else if (playerMove === 'scissors') {
+                losingCondition = 'rock';
+            } else {
+                losingCondition = 'scissors';
+            }
+            playGame(playerMove, losingCondition);
+            console.log(`${playerMove} and ${losingCondition}`);
+        }, 1000);
+        isAutoPlaying = true;
+    } else {
+        clearInterval(intervalId);
+        isAutoPlaying = false;
+    }
 }
